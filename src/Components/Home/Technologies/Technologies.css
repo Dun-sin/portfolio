@@ -1,0 +1,65 @@
+.tech {
+	margin: 10px;
+	height: 100%;
+	width: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tech div {
+	height: 100px;
+	width: 100px;
+	padding: 20px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid beige; */
+	margin-left: 10px;
+	transition: all 1s ease-in;
+}
+
+.tech div svg {
+	height: 100px;
+	width: 100px;
+}
+
+.tech__css:hover {
+	background-color: rgba(21, 114, 182, 0.6);
+}
+
+.tech__github:hover {
+	background-color: rgba(24, 22, 22, 0.6);
+}
+
+.tech__html:hover {
+	background-color: rgba(228, 77, 38, 0.6);
+}
+
+.tech__js:hover {
+	background-color: rgba(240, 219, 79, 0.6);
+}
+
+.tech__node:hover {
+	background-color: rgba(131, 205, 41, 0.6);
+}
+
+.tech__react:hover {
+	background-color: rgba(97, 218, 251, 0.6);
+}
+
+.tech__socket:hover {
+	background-color: rgba(1, 1, 1, 0.6);
+}
+
+.tech__express:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1200px) {
+	.tech {
+		width: 100%;
+	}
+}

@@ -1,11 +1,18 @@
 .home {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.home__intro {
 	display: flex;
 	flex-direction: column;
 	font-size: 2em;
 	justify-content: center;
-	margin-top: 100px;
 	padding: 20px;
-	max-width: 1000px;
+	max-width: 800px;
 }
 
 .name {
@@ -20,11 +27,22 @@
 	margin: 20px;
 }
 
-.home__icons > a {
+.home__icons a {
 	margin-left: 20px;
 	margin-right: 50px;
 }
 
+.home__tech {
+	margin: 10px;
+	margin-left: 20px;
+}
+
+.tech__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5em;
+}
 .github {
 	color: white;
 	transform: scale(3);
@@ -43,4 +61,10 @@
 .linkedin {
 	color: #2867b2;
 	transform: scale(3);
+}
+
+@media screen and (max-width: 1200px) {
+	.home {
+		flex-direction: column;
+	}
 }
