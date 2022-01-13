@@ -14,7 +14,7 @@ const Home = () => {
         <h1 className='name'>Favour Opemipo Faiyetole</h1>
         <div className='introduction'>
           <p>Hello!</p>
-          <p>I'm an Aspiring <strong>Full-Stack Web Developer</strong> based in Nigeria. My Technologies are Javascript, React, nodeJs, Sql, Java, Python,  but I mostly specialize in the <strong> MERN Stack(MongoDb, ExpressJs, ReactJs, NodeJs)</strong>.</p>
+          <p>I'm an Aspiring <strong>Full-Stack Web Developer</strong> based in Nigeria.I mostly specialize in the <strong> MERN Stack(MongoDb, ExpressJs, ReactJs, NodeJs)</strong>.</p>
           <div className="home__icons">
             <a href={"https://github.com/Dun-sin"} target="_blank" rel="noopener noreferrer">
               <GitHubIcon className="github" />
