@@ -1,0 +1,21 @@
+.mail {
+	font-size: 1.5em;
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	height: 50px;
+	width: 200px;
+	background-color: #315082;
+	transition: all 0.2s ease-in;
+}
+
+.mail:hover {
+	background-color: #23395d;
+}
+
+.mail a {
+	color: rgb(202, 218, 245);
+	text-decoration: none;
+}

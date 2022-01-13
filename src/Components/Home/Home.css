@@ -1,0 +1,46 @@
+.home {
+	display: flex;
+	flex-direction: column;
+	font-size: 2em;
+	justify-content: center;
+	margin-top: 100px;
+	padding: 20px;
+	max-width: 1000px;
+}
+
+.name {
+	position: relative;
+	top: -50px;
+	font-weight: 700;
+}
+
+.home__icons {
+	display: flex;
+	justify-content: safe;
+	margin: 20px;
+}
+
+.home__icons > a {
+	margin-left: 20px;
+	margin-right: 50px;
+}
+
+.github {
+	color: white;
+	transform: scale(3);
+}
+
+.instagram {
+	color: #dd2a7b;
+	transform: scale(3);
+}
+
+.twitter {
+	color: #00acee;
+	transform: scale(3);
+}
+
+.linkedin {
+	color: #2867b2;
+	transform: scale(3);
+}

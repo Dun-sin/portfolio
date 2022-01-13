@@ -1,0 +1,22 @@
+.about {
+	margin: 20px;
+	margin-top: 40px;
+	display: flex;
+	height: 500px;
+	padding: 30px;
+}
+
+.about div {
+	max-height: 300px;
+	max-width: 1000px;
+}
+
+.about div h1 {
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 2.5em;
+}
+
+.about div p {
+	font-size: 2em;
+}

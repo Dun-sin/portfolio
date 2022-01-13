@@ -1,0 +1,18 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.projects__project {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.projects > h1 {
+  font-size: 2em;
+  font-weight: 600;
+}

@@ -1,0 +1,43 @@
+.header {
+	font-size: 1.38em;
+	margin: 10px;
+	height: 30px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header__option > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.header__option > ul > a {
+	color: rgb(202, 218, 245);
+	text-decoration: none;
+	margin: 10px;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+
+.header__option > ul > a:hover {
+	color: #446fb4;
+	padding: 1px;
+}
+
+@media screen and (max-width: 396px) {
+	.header {
+		font-size: 0.7em;
+		display: flex;
+		justify-content: center;
+	}
+
+	.header__option ul a {
+		margin-left: 0.3em;
+		transition: all 0.2s ease-in;
+	}
+
+	.header__option ul a:last-child {
+		margin-left: 0;
+	}
+}
