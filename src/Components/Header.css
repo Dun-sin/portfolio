@@ -27,7 +27,7 @@
 
 @media screen and (max-width: 396px) {
 	.header {
-		font-size: 0.7em;
+		font-size: 0.9em;
 		display: flex;
 		justify-content: center;
 	}
