@@ -19,6 +19,12 @@ const Projects = () => {
           name="Weather App"
           tech="React OpenWeatherAPI"
         />
+        <Project
+          url="https://apptodolis-t.web.app/"
+          image="https://i.ibb.co/Fs6P58B/image-2022-01-14-06-55-20.png"
+          name="Todo List"
+          tech="React"
+        />
       </div>
     </div>
   )
