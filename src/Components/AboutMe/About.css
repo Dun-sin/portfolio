@@ -1,22 +1,22 @@
 .about {
-	margin: 20px;
 	margin-top: 40px;
-	display: flex;
-	height: 500px;
-	padding: 30px;
+	min-height: 80vh;
+	max-width: 100vw;
 }
 
-.about div {
-	max-height: 300px;
-	max-width: 1000px;
-}
-
-.about div h1 {
+.about h1 {
 	margin-bottom: 20px;
 	font-weight: 600;
 	font-size: 2.5em;
 }
 
-.about div p {
+.about p {
 	font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+	.about p {
+		font-size: 1em;
+		height: 100vh;
+	}
 }

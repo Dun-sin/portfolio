@@ -16,13 +16,11 @@ const About = () => {
 
   return (
     <div className="about">
-      <div>
-        <h1>About Me</h1>
-        <p>
-          My name is Favour, I’m {calculate_age()} and I’m a Computer science student at the Elizade University, Ondo State, Nigeria.
-          Learning web development was my first step towards becoming a web developer, because building websites and web applications always seemed like a fun thing to do and I was eager to do it myself.
-        </p>
-      </div>
+      <h1>About Me</h1>
+      <p>
+        My name is Favour, I’m {calculate_age()} and I’m a Computer science student at the Elizade University, Ondo State, Nigeria.
+        Learning web development was my first step towards becoming a web developer, because building websites and web applications always seemed like a fun thing to do and I was eager to do it myself.
+      </p>
     </div>
   )
 }

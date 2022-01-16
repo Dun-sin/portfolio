@@ -1,3 +1,20 @@
 body {
-  background: rgba(21, 34, 56, 1);
+	background: rgb(15, 25, 43);
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 2em;
+	margin-right: 4em;
+	margin-left: 4em;
+}
+
+@media screen and (max-width: 640px) {
+	.App {
+		align-items: center;
+		margin-left: 55px;
+		margin-right: 55px;
+	}
 }

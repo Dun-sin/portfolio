@@ -1,9 +1,21 @@
 .header {
-	font-size: 1.38em;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
 	margin: 10px;
+	margin-left: 0;
 	height: 30px;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
+}
+
+.header a {
+	color: rgb(234, 240, 250);
+	text-decoration: none;
+}
+
+.header p {
+	margin-top: 10px;
+	margin-right: 20px;
 }
 
 .header__option > ul {
@@ -13,27 +25,28 @@
 }
 
 .header__option > ul > a {
-	color: rgb(202, 218, 245);
-	text-decoration: none;
 	margin: 10px;
+	margin-left: 30px;
 	cursor: pointer;
 	transition: all 0.2s ease-in;
 }
 
-.header__option > ul > a:hover {
+.header__option > ul > a:hover,
+.header__option > ul > a:focus,
+.header__option > ul > a:active {
 	color: #446fb4;
 	padding: 1px;
 }
 
-@media screen and (max-width: 396px) {
+@media screen and (max-width: 640px) {
 	.header {
-		font-size: 0.9em;
+		font-size: calc(70vw - 66.5vw);
 		display: flex;
 		justify-content: center;
 	}
 
 	.header__option ul a {
-		margin-left: 0.3em;
+		margin-left: 0.4em;
 		transition: all 0.2s ease-in;
 	}
 

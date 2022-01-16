@@ -1,70 +1,103 @@
 .home {
-	margin-top: 50px;
+	font-family: 'Poppins', sans-serif;
+	margin-top: 100px;
+	min-height: calc(100vh - 300px);
+	overflow-y: hidden;
+}
+
+.introduction {
+	max-width: 100vw;
+	overflow: hidden;
+}
+
+.name {
+	white-space: nowrap;
+	font-size: 3.4em;
+	font-weight: 500;
+	color: rgb(188, 205, 233);
+}
+
+.home__intro {
+	font-size: 1.5em;
+	justify-content: center;
+	max-width: 100vw;
+}
+
+.home__contact {
+	margin-top: 10px;
 	display: flex;
-	flex-direction: row;
+	width: 450px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-.home__intro {
-	display: flex;
-	flex-direction: column;
-	font-size: 2em;
-	justify-content: center;
-	padding: 20px;
-	max-width: 800px;
-}
-
-.name {
-	position: relative;
-	top: -50px;
-	font-weight: 700;
-}
-
 .home__icons {
 	display: flex;
-	justify-content: safe;
-	margin: 20px;
+	margin-top: 15px;
 }
 
 .home__icons a {
-	margin-left: 20px;
-	margin-right: 50px;
+	margin-right: 40px;
 }
 
-.home__tech {
-	margin: 10px;
-	margin-left: 20px;
-}
-
-.tech__header {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 1.5em;
-}
-.github {
-	color: white;
-	transform: scale(3);
-}
-
-.instagram {
-	color: #dd2a7b;
-	transform: scale(3);
-}
-
-.twitter {
-	color: #00acee;
-	transform: scale(3);
-}
-
+.github,
+.instagram,
 .linkedin {
-	color: #2867b2;
-	transform: scale(3);
+	color: #0094ff;
+	transform: scale(1.5);
+	transition: all 0.5s ease-in;
 }
 
-@media screen and (max-width: 1200px) {
+.instagram:hover,
+.instagram:focus {
+	color: #fb3958;
+}
+
+.github:hover,
+.github:focus {
+	color: white;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+	color: #2867b2;
+}
+
+.svg {
+	position: fixed;
+	top: 1vh;
+	left: 50vw;
+	width: 50vw;
+	z-index: -10000;
+}
+
+@media screen and (max-width: 640px) {
+	/* .svg {
+		display: none;
+	} */
 	.home {
+		display: flex;
+		align-items: center;
+		margin-top: 2vh;
+		margin-left: 50px;
+	}
+	.name {
+		font-size: calc(80vw - 68vw);
+	}
+
+	.home__contact {
+		display: flex;
 		flex-direction: column;
+	}
+
+	.home__intro {
+		font-size: calc(80vw - 75vw);
+	}
+
+	.home__icons {
+		margin-top: 20px;
+		margin-left: 15px;
+		display: flex;
+		justify-content: left;
 	}
 }

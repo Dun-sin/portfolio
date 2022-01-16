@@ -7,7 +7,7 @@ import Header from './Components/Header';
 import Home from "./Components/Home/Home";
 import About from "./Components/AboutMe/About";
 import Projects from "./Components/Projects/Projects"
-import Email from "./Components/Email/Email";
+import Technologies from './Components/Home/Technologies/Technologies'
 
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Email />} />
+          <Route path="/tech" element={<Technologies />} />
           <Route render={() => <Navigate to="/" />} />
         </Routes>
       </div>

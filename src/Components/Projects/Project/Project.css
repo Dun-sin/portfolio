@@ -1,20 +1,8 @@
 .project {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 200px;
-	width: 200px;
-	font-weight: 500;
-	padding: 10px;
+	height: 400px;
+	width: 400px;
+	margin: 20px;
 	border-radius: 15px;
-	transition: all 0.4s ease-in;
-}
-
-.project:hover,
-.project:focus {
-	transform: scale(1.05);
-	box-shadow: 10px 10px 20px #000;
 }
 
 .project a {
@@ -23,19 +11,21 @@
 }
 
 .project__info {
-	align-self: flex-start;
-	margin-left: 13px;
+	width: 70%;
 }
 
 .project__image > img {
-	max-height: 150px;
-	width: 150px;
+	height: 300px;
+	width: 300px;
 }
 
 .info__nameSmall {
 	font-size: 1em;
+	font-weight: 600;
 }
 
 .info__nameTech {
+	margin-top: 5px;
+	font-weight: 300;
 	font-size: 0.7em;
 }

@@ -1,7 +1,6 @@
 .tech {
 	margin: 10px;
-	height: 100%;
-	width: 400px;
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -22,6 +21,10 @@
 .tech div svg {
 	height: 100px;
 	width: 100px;
+}
+
+.tech div i {
+	font-size: 100px;
 }
 
 .tech__css:hover {
