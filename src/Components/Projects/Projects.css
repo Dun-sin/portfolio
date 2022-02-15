@@ -22,10 +22,10 @@
 
 @media screen and (max-width: 640px) {
 	.projects > h1 {
-		font-size: calc(80vw - 73vw);
+		font-size: calc(80vw - 75vw);
 	}
 
 	.projects {
-		margin-left: 100px;
+		margin-left: 10px;
 	}
 }
