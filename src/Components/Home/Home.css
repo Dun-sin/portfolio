@@ -11,10 +11,16 @@
 }
 
 .name {
+	display: flex;
+	flex-direction: row;
 	white-space: nowrap;
 	font-size: 3.4em;
 	font-weight: 500;
 	color: rgb(188, 205, 233);
+}
+
+.name > span {
+	color: red;
 }
 
 .home__intro {

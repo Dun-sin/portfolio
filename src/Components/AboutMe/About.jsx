@@ -18,8 +18,7 @@ const About = () => {
     <div className="about">
       <h1>About Me</h1>
       <p>
-        My name is Favour, I’m {calculate_age()} and I’m a Computer science student at the Elizade University, Ondo State, Nigeria.
-        Learning web development was my first step towards becoming a web developer, because building websites and web applications always seemed like a fun thing to do and I was eager to do it myself.
+        My name is Favour, I'm {calculate_age()} years old and studying computer science at the Elizade University in Ondo state, Nigeria. My first step towards becoming a web developer was learning web development since I've always thought that creating websites and web applications would be fun, and I wanted to try it for myself.
       </p>
     </div>
   )

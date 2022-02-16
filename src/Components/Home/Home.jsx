@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import './Home.css';
-
 // Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -8,44 +7,64 @@ import LinkedIn from '@mui/icons-material/LinkedIn';
 
 // components
 import ButtonMailto from '../Email/ButtonMailto';
-// import Technologies from './Technologies/Technologies';
 
 const Home = () => {
   const textRef = useRef(null);
+  const cursorRef = useRef(null);
 
   useEffect(() => {
-    let headerText = ["Hi, I'm Favour", "Problem Solver", "Web Developer", "Nigerian", "Awesome", "Love to Code"]
+    const headerText = ["Hi, I'm Favour", "Problem Solver", "Web Developer", "Nigerian", "Awesome", "Love to Code"]
+    const typingDelay = 200;
+    const erasingDelay = 100;
+    const newTextDelay = 500;
 
-    function typeWriter(text, i, fncallback) {
-      if (i < (text.length)) {
-        textRef.current.innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-        setTimeout(() => {
-          typeWriter(text, i + 1, fncallback)
-        }, 100);
-      } else if (typeof fncallback == 'function') {
-        setTimeout(fncallback, 1000);
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    let cursorSpan = cursorRef.current;
+    let typedTextSpan = textRef.current;
+
+    const type = () => {
+      if (charIndex < headerText[textArrayIndex].length) {
+        if (cursorSpan.classList.value !== "typing") {
+          cursorSpan.classList.add("typing")
+        }
+        typedTextSpan.textContent += headerText[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
       }
     }
 
-    function StartTextAnimation(i) {
-      if (typeof headerText[i] == 'undefined') {
-        setTimeout(() => {
-          StartTextAnimation(0);
-        }, 5000);
-      }
-
-      if (i < headerText[i].length) {
-        typeWriter(headerText[i], 0, () => {
-          StartTextAnimation(i + 1);
-        });
+    function erase() {
+      if (charIndex > 0) {
+        if (!cursorSpan.classList.value !== "typing") {
+          cursorSpan.classList.add("typing")
+        }
+        typedTextSpan.textContent = headerText[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if (textArrayIndex >= headerText.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 500);
       }
     }
-    StartTextAnimation(0);
-  }, [])
+
+    const start = () => {
+      if (headerText.length) {
+        setTimeout(type, newTextDelay + 250);
+      }
+    }
+    start();
+  }, []);
+
   return (
     <div className="home">
       <div className='introduction'>
-        <div className='name' ref={textRef}></div>
+        <div className='name'><p ref={textRef}></p><span ref={cursorRef}>&nbsp;</span></div>
         <div className='home__intro'>
           <div>
             <p>An aspiring <strong>Full-Stack Web Developer</strong></p>
