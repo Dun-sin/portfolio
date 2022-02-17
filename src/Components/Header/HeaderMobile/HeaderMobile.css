@@ -6,9 +6,9 @@
 	height: calc(100vh - 10px);
 	width: calc(100vw - 50px);
 	padding-left: 50px;
+	padding-top: 20vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 }
 
 .mobile__option > a > li {
