@@ -1,0 +1,30 @@
+.header__option > ul {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.header__option > ul > a {
+	margin: 10px;
+	margin-left: 30px;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+}
+
+.header__option > ul > a:hover,
+.header__option > ul > a:focus,
+.header__option > ul > a:active {
+	color: #446fb4;
+	padding: 1px;
+}
+
+@media screen and (max-width: 640px) {
+	.header__option ul a {
+		margin-left: 0.4em;
+		transition: all 0.2s ease-in;
+	}
+
+	.header__option ul a:last-child {
+		margin-left: 0;
+	}
+}

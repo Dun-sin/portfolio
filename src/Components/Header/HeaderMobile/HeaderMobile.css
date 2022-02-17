@@ -1,0 +1,17 @@
+.mobile__option {
+	overflow: hidden;
+	position: absolute;
+	font-size: 8vw;
+	background-color: rgb(15, 25, 43);
+	height: calc(100vh - 10px);
+	width: calc(100vw - 50px);
+	padding-left: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.mobile__option > a > li {
+	overflow: hidden;
+	list-style: none;
+}
