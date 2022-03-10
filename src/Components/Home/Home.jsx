@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import './Home.css';
+
 // Icons
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedIn from '@mui/icons-material/LinkedIn';
+import Twitter from '@mui/icons-material/Twitter';
 
 // components
 import ButtonMailto from '../Email/ButtonMailto';
@@ -13,7 +15,7 @@ const Home = () => {
   const cursorRef = useRef(null);
 
   useEffect(() => {
-    const headerText = ["Hi, I'm Favour", "Problem Solver", "Web Developer", "Nigerian", "Awesome", "Love to Code"]
+    const headerText = ["Hi, I'm Favour", "Web Developer", "Nigerian", "Awesome", "Love to Code"]
     const typingDelay = 200;
     const erasingDelay = 100;
     const newTextDelay = 500;
@@ -71,19 +73,25 @@ const Home = () => {
             <p>based in Nigeria, specializing </p>
             <p>in the <strong> MERN Stack</strong></p>
           </div>
-          <div className="home__contact">
+        </div>
+        <div className="home__contact">
+          <span className='btn'>
             <ButtonMailto label="Get In Touch" mailto="mailto:faiyetolef@gmail.com" />
-            <div className="home__icons">
-              <a className="github" href={"https://github.com/Dun-sin"} target="_blank" rel="noopener noreferrer">
-                <GitHubIcon />
-              </a>
-              <a className="instagram" href={"https://www.instagram.com/dunsin__codes/"} target="_blank" rel="noopener noreferrer">
-                <InstagramIcon />
-              </a>
-              <a className="linkedin" href={"https://www.linkedin.com/in/favour-faiyetole-99a438229"} target="_blank" rel="noopener noreferrer">
-                <LinkedIn />
-              </a>
-            </div>
+            <a className='resume' href={'./resume.pdf'} download>Download Resume</a>
+          </span>
+          <div className="home__icons">
+            <a className="github" href={"https://github.com/Dun-sin"} target="_blank" rel="noopener noreferrer">
+              <GitHubIcon />
+            </a>
+            <a className="instagram" href={"https://www.instagram.com/dunsincodes/"} target="_blank" rel="noopener noreferrer">
+              <InstagramIcon />
+            </a>
+            <a className="linkedin" href={"https://www.linkedin.com/in/favour-faiyetole-99a438229"} target="_blank" rel="noopener noreferrer">
+              <LinkedIn />
+            </a>
+            <a className='twitter' href={"https://twitter.com/Dunsin_codes"} target="_blank" rel="noopener noreferrer">
+              <Twitter />
+            </a>
           </div>
         </div>
       </div>

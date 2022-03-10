@@ -1,5 +1,7 @@
 body {
 	background: rgb(15, 25, 43);
+	min-height: 100vh;
+	max-height: 100vh;
 }
 
 .App {
@@ -9,6 +11,7 @@ body {
 	margin-top: 2em;
 	margin-right: 4em;
 	margin-left: 4em;
+	max-height: 100vh;
 }
 
 @media screen and (max-width: 640px) {

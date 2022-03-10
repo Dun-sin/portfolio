@@ -1,6 +1,5 @@
 .mail {
 	font-size: 16px;
-	margin-top: 10px;
 	white-space: nowrap;
 	display: flex;
 	justify-content: center;
@@ -8,8 +7,10 @@
 	border-radius: 20px;
 	height: 40px;
 	width: 200px;
+	margin-bottom: 10px;
 	background-color: #0094ff;
 	transition: all 0.2s ease-in;
+	cursor: pointer;
 }
 
 .mail:hover {
@@ -20,4 +21,11 @@
 .mail a {
 	color: rgb(202, 218, 245);
 	text-decoration: none;
+}
+
+@media screen and (max-width: 444px) {
+	.mail {
+		width: 310px;
+		margin-right: 80px;
+	}
 }

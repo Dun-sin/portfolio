@@ -1,44 +1,46 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './HeaderMobile.css';
 import { HashLink as Link } from 'react-router-hash-link';
 
-const HeaderMobile = ({ mobile, open, close }) => {
-
-  const closeNav = () => {
-    open.current.style.display = "block";
-    close.current.style.display = "none";
-    mobile.current.style.display = "none"
-  }
-
-  useEffect(() => {
-    closeNav();
-  }, [])
+const HeaderMobile = ({ state }) => {
 
   return (
     <div className="mobile">
       <nav className="mobile__option">
         <Link smooth
           to="/"
-          onClick={closeNav}>
+          onClick={() => {
+            state()
+          }}
+        >
           <li>Home</li>
         </Link>
         <Link smooth
           to="/projects"
-          onClick={closeNav}>
+          onClick={() => {
+            state()
+          }}
+        >
           <li>Projects</li>
         </Link>
         <Link smooth
           to="/tech"
-          onClick={closeNav}>
+          onClick={() => {
+            state()
+          }}
+        >
           <li>Technologies</li>
         </Link>
         <Link smooth
           to={"/about"}
-          onClick={closeNav}>
+          onClick={() => {
+            state()
+          }}
+        >
           <li>About</li>
         </Link>
       </nav>
-    </div>
+    </div >
   )
 }
 
