@@ -52,6 +52,12 @@
 		font-size: calc(80vw - 75vw);
 	}
 
+	.dot {
+		border-radius: 40px;
+		height: 30px;
+		width: 30px;
+		margin-left: 10px;
+	}
 	.projects {
 		margin-left: 10px;
 	}

@@ -120,21 +120,16 @@
 	.home {
 		display: flex;
 	}
-	.btn {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
 
 	.resume {
-		width: 310px;
-	}
-
-	.home__contact {
-		align-items: center;
+		width: 80vw;
 	}
 
 	.home__icons {
+		margin-right: 50px;
+	}
+
+	.home__icons a {
 		margin-right: 50px;
 	}
 }
