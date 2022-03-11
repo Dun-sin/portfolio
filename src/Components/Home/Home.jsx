@@ -77,7 +77,6 @@ const Home = () => {
 
   return (
     <motion.div
-      initial="out"
       animate="in"
       exit="out"
       variants={pageTransition}
