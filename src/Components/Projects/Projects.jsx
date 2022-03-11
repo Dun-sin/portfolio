@@ -2,17 +2,61 @@ import React from 'react'
 import './Projects.css'
 // import Project from './Project/Project';
 
+import { motion } from "framer-motion";
+
 const Projects = () => {
+  const dotContainerVariant = {
+    start: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    },
+    end: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const dotVariant = {
+    start: {
+      y: '0%'
+    },
+    end: {
+      y: '100%'
+    }
+  }
+
+  const dotTransition = {
+    duration: 0.5,
+    yoyo: Infinity,
+  }
   return (
     <div className="projects" id="projects">
       <h1>My Works/Projects</h1>
       <div className="projects__project">
         <div className='soon'>
-          <div className="dots">
-            <div className="dot"></div>
-            <div className="dot"></div>
-            <div className="dot"></div>
-          </div>
+          <motion.div
+            initial="start"
+            animate="end"
+            variants={dotContainerVariant}
+            className="dots">
+            <motion.div
+              variants={dotVariant}
+              transition={dotTransition}
+              className="dot">
+            </motion.div>
+            <motion.div
+              variants={dotVariant}
+              transition={dotTransition}
+              className="dot">
+            </motion.div>
+            <motion.div
+              transition={dotTransition}
+              variants={dotVariant}
+              className="dot">
+            </motion.div>
+          </motion.div>
           <p>Coming soon</p>
         </div>
         {/* <Project
@@ -37,7 +81,7 @@ const Projects = () => {
           description="Clone of the popular Amazon e-commerce site"
         /> */}
       </div>
-    </div>
+    </div >
   )
 }
 
