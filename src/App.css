@@ -1,3 +1,23 @@
+/* width */
+::-webkit-scrollbar {
+	width: 0px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
 body {
 	background: rgb(15, 25, 43);
 	min-height: 100vh;
@@ -7,11 +27,10 @@ body {
 .App {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
-	margin-top: 2em;
 	margin-right: 4em;
 	margin-left: 4em;
 	max-height: 100vh;
+	min-height: 100vh;
 }
 
 @media screen and (max-width: 640px) {

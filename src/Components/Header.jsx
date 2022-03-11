@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import './Header.css';
-
 // Components
 import HeaderMobile from './Header/HeaderMobile/HeaderMobile';
 import HeaderDesktop from './Header/HeaderDesktop/HeaderDesktop';
@@ -9,6 +7,8 @@ import HeaderDesktop from './Header/HeaderDesktop/HeaderDesktop';
 // Icons
 import Open from '@mui/icons-material/ClearAll';
 import Close from '@mui/icons-material/Clear';
+
+import './Header.css';
 
 const Header = () => {
   // const [open, setOpen] = useState(true);
@@ -34,6 +34,7 @@ const Header = () => {
 
   return (
     <div className="header">
+
       <Link smooth to="/">
         <p className='favour'>Favour</p>
       </Link>

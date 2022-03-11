@@ -28,11 +28,29 @@ const Projects = () => {
   }
 
   const dotTransition = {
-    duration: 0.5,
+    duration: 0.4,
     yoyo: Infinity,
   }
+
+  const pageTransition = {
+    in: {
+      opacity: 1,
+      y: "0"
+    },
+    out: {
+      opacity: 0,
+      y: "-100vh"
+    }
+  }
+
   return (
-    <div className="projects" id="projects">
+    <motion.div
+      exit="out"
+      animate="in"
+      initial="out"
+      variants={pageTransition}
+      className="projects"
+      id="projects">
       <h1>My Works/Projects</h1>
       <div className="projects__project">
         <div className='soon'>
@@ -81,7 +99,7 @@ const Projects = () => {
           description="Clone of the popular Amazon e-commerce site"
         /> */}
       </div>
-    </div >
+    </motion.div >
   )
 }
 

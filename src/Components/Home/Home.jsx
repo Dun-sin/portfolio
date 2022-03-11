@@ -1,4 +1,5 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import './Home.css';
 
 // Icons
@@ -9,7 +10,6 @@ import Twitter from '@mui/icons-material/Twitter';
 
 // components
 import ButtonMailto from '../Email/ButtonMailto';
-
 const Home = () => {
   const textRef = useRef(null);
   const cursorRef = useRef(null);
@@ -22,6 +22,7 @@ const Home = () => {
 
     let textArrayIndex = 0;
     let charIndex = 0;
+
     let cursorSpan = cursorRef.current;
     let typedTextSpan = textRef.current;
 
@@ -63,8 +64,24 @@ const Home = () => {
     start();
   }, []);
 
+  const pageTransition = {
+    in: {
+      opacity: 1,
+      y: "0%"
+    },
+    out: {
+      opacity: 0,
+      y: "-100%"
+    }
+  }
+
   return (
-    <div className="home">
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={pageTransition}
+      className="home">
       <div className='introduction'>
         <div className='name'><p ref={textRef}></p><span ref={cursorRef}>&nbsp;</span></div>
         <div className='home__intro'>
@@ -95,17 +112,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="svg">
-        <svg id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
-              <stop id="stop1" stop-color="rgba(0, 148, 255, 1)" offset="0%"></stop>
-              <stop id="stop2" stop-color="rgba(4.681, 41.855, 68.73, 1)" offset="100%"></stop>
-            </linearGradient>
-          </defs>
-          <path fill="url(#sw-gradient)" d="M21.9,-38C27.6,-34.7,30.9,-27.2,33.4,-20.2C35.8,-13.2,37.4,-6.6,38.2,0.4C39,7.5,38.9,14.9,36.3,21.7C33.6,28.4,28.5,34.4,22,38.2C15.6,42,7.8,43.5,0.8,42.2C-6.3,40.9,-12.5,36.7,-19.5,33.2C-26.5,29.7,-34.2,27,-38.4,21.5C-42.7,16.1,-43.5,8.1,-42.9,0.3C-42.3,-7.4,-40.4,-14.8,-36.9,-21.6C-33.4,-28.3,-28.4,-34.4,-22,-37.3C-15.6,-40.2,-7.8,-40,0.2,-40.3C8.1,-40.5,16.2,-41.3,21.9,-38Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" stroke="url(#sw-gradient)"></path>              </svg>
+      <div className='svg'>
+        <svg viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill="#026AB6"
+            d="M44.1,-66.4C57.3,-60.1,68.2,-48.1,74,-34.1C79.8,-20.2,80.6,-4.2,79.9,12.6C79.1,29.3,76.8,47,67.8,60.3C58.7,73.6,42.8,82.6,26.4,85.4C9.9,88.2,-7,84.9,-21.1,77.9C-35.2,71,-46.5,60.6,-54.1,48.6C-61.6,36.7,-65.4,23.3,-65.4,10.6C-65.5,-2.2,-61.8,-14.4,-56,-24.9C-50.1,-35.4,-42.1,-44.2,-32.4,-52.1C-22.7,-60,-11.4,-66.9,2,-70.1C15.5,-73.3,30.9,-72.7,44.1,-66.4Z"
+            transform="translate(100 100)" />
+        </svg>
       </div>
-    </div >
+    </motion.div>
   )
 }
 

@@ -1,11 +1,15 @@
 .header {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
-	margin: 10px;
+	margin-right: 10px;
 	margin-left: 0;
-	height: 30px;
+	margin-bottom: 0;
+	height: 100px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(15, 25, 43);
+	z-index: 100;
 }
 
 .header a {
@@ -60,9 +64,9 @@
 	}
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	.header {
-		font-size: calc(70vw - 66.5vw);
+		font-size: calc(70vw - 67vw);
 	}
 
 	.mobile {

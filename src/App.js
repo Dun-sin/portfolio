@@ -1,30 +1,33 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+
+import { AnimatePresence } from 'framer-motion';
 import './index.css';
 import './App.css';
 
 // Components import
 import Header from './Components/Header';
-import Home from "./Components/Home/Home";
-import About from "./Components/AboutMe/About";
-import Projects from "./Components/Projects/Projects"
-import Technologies from './Components/Home/Technologies/Technologies'
-
+import Home from './Components/Home/Home';
+import About from './Components/AboutMe/About';
+import Projects from './Components/Projects/Projects';
+import Technologies from './Components/Home/Technologies/Technologies';
 
 const App = () => {
-  return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/tech" element={<Technologies />} />
-          <Route render={() => <Navigate to="/" />} />
-        </Routes>
-      </div>
-    </Router>
-  );
-}
+	const location = useLocation();
+
+	return (
+		<div className='App'>
+			<Header />
+			<AnimatePresence exitBeforeEnter>
+				<Routes location={location} key={location.pathname}>
+					<Route path='/' element={<Home />} />
+					<Route path='/about' element={<About />} />
+					<Route path='/projects' element={<Projects />} />
+					<Route path='/tech' element={<Technologies />} />
+					<Route render={() => <Navigate to='/' />} />
+				</Routes>
+			</AnimatePresence>
+		</div>
+	);
+};
 
 export default App;

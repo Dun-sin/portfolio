@@ -1,8 +1,12 @@
 .home {
 	font-family: 'Poppins', sans-serif;
-	margin-top: 100px;
+	/* margin-top: 100px; */
 	min-height: calc(100vh - 300px);
 	overflow-y: hidden;
+	width: 100vw;
+	max-height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
 .introduction {
@@ -110,10 +114,10 @@
 
 .svg {
 	position: fixed;
-	top: 1vh;
-	left: 50vw;
+	top: -1vh;
+	left: 40vw;
 	width: 50vw;
-	z-index: -10000;
+	z-index: -1000;
 }
 
 @media screen and (max-width: 444px) {
