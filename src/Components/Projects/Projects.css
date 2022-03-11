@@ -45,6 +45,7 @@
 	font-size: 2em;
 	font-weight: 600;
 }
+*/
 
 @media screen and (max-width: 640px) {
 	.projects > h1 {
@@ -54,4 +55,4 @@
 	.projects {
 		margin-left: 10px;
 	}
-} */
+}
