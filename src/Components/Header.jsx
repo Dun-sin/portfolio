@@ -34,7 +34,6 @@ const Header = () => {
 
   return (
     <div className="header">
-
       <Link smooth to="/">
         <p className='favour'>Favour</p>
       </Link>

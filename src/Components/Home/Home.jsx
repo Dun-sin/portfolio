@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { saveAs } from "file-saver";
 import './Home.css';
 
 // Icons
@@ -14,11 +15,18 @@ const Home = () => {
   const textRef = useRef(null);
   const cursorRef = useRef(null);
 
+  const handleDownload = () => {
+    saveAs(
+      "https://cdn.filesend.jp/private/RpgAx1LUYoVzLAxz7IUxr71om351Uw3F3lC0nKqQEXdqosNKia7nqdhfbywDXbot/Favour%27s%20resume.pdf",
+      "Favour's Resume.pdf"
+    )
+  }
+
   useEffect(() => {
-    const headerText = ["Hi, I'm Favour", "Web Developer", "Nigerian", "Awesome", "Love to Code"]
-    const typingDelay = 200;
-    const erasingDelay = 100;
-    const newTextDelay = 500;
+    const headerText = ["Hi, I'm Favour", "Awesome", "Love to Code"]
+    const typingDelay = 150;
+    const erasingDelay = 50;
+    const newTextDelay = 400;
 
     let textArrayIndex = 0;
     let charIndex = 0;
@@ -79,13 +87,14 @@ const Home = () => {
     <motion.div
       animate="in"
       exit="out"
+      initial="out"
       variants={pageTransition}
       className="home">
       <div className='introduction'>
         <div className='name'><p ref={textRef}></p><span ref={cursorRef}>&nbsp;</span></div>
         <div className='home__intro'>
           <div>
-            <p>An aspiring <strong>Full-Stack Web Developer</strong></p>
+            <p>A <strong>Full-Stack Web Developer</strong></p>
             <p>based in Nigeria, specializing </p>
             <p>in the <strong> MERN Stack</strong></p>
           </div>
@@ -93,7 +102,7 @@ const Home = () => {
         <div className="home__contact">
           <span className='btn'>
             <ButtonMailto label="Get In Touch" mailto="mailto:faiyetolef@gmail.com" />
-            <a className='resume' href={'./resume.pdf'} download>Download Resume</a>
+            <button className='resume' onClick={handleDownload}>Download Resume</button>
           </span>
           <div className="home__icons">
             <a className="github" href={"https://github.com/Dun-sin"} target="_blank" rel="noopener noreferrer">

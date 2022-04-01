@@ -51,7 +51,6 @@ const Projects = () => {
       variants={pageTransition}
       className="projects"
       id="projects">
-      <h1>My Works/Projects</h1>
       <div className="projects__project">
         <div className='soon'>
           <motion.div

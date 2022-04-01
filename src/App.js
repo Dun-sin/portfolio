@@ -17,15 +17,17 @@ const App = () => {
 	return (
 		<div className='App'>
 			<Header />
-			<AnimatePresence exitBeforeEnter>
-				<Routes location={location} key={location.pathname}>
-					<Route path='/' element={<Home />} />
-					<Route path='/about' element={<About />} />
-					<Route path='/projects' element={<Projects />} />
-					<Route path='/tech' element={<Technologies />} />
-					<Route render={() => <Navigate to='/' />} />
-				</Routes>
-			</AnimatePresence>
+			<div className='content'>
+				<AnimatePresence exitBeforeEnter>
+					<Routes location={location} key={location.pathname}>
+						<Route path='/' element={<Home />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/projects' element={<Projects />} />
+						<Route path='/tech' element={<Technologies />} />
+						<Route render={() => <Navigate to='/' />} />
+					</Routes>
+				</AnimatePresence>
+			</div>
 		</div>
 	);
 };

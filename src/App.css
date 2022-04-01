@@ -29,8 +29,15 @@ body {
 	flex-direction: column;
 	margin-right: 4em;
 	margin-left: 4em;
-	max-height: 100vh;
+	max-height: inherit;
+	min-height: inherit;
+}
+
+.content {
+	display: flex;
 	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
 }
 
 @media screen and (max-width: 640px) {

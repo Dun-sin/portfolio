@@ -2,9 +2,9 @@
 	font-family: 'Poppins', sans-serif;
 	font-weight: 600;
 	margin-right: 10px;
-	margin-left: 0;
-	margin-bottom: 0;
 	height: 100px;
+	min-width: 90vw;
+	max-width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,6 +14,7 @@
 
 .header a {
 	color: rgb(234, 240, 250);
+	margin-right: 10px;
 	text-decoration: none;
 }
 
@@ -51,7 +52,8 @@
 	.header {
 		font-size: calc(70vw - 66.5vw);
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-evenly;
+		min-width: 100vw;
 	}
 
 	.desktop {

@@ -1,20 +1,27 @@
 .about {
 	margin-top: 40px;
-	min-height: 80vh;
-	max-width: 100vw;
-}
-
-.about h1 {
-	margin-bottom: 20px;
-	font-weight: 600;
-	font-size: 2.5em;
+	min-height: 100vh;
+	width: 50vw;
 }
 
 .about p {
-	font-size: 2em;
+	text-align: justify;
+	font-size: 1.5em;
+}
+
+.achievement {
+	font-size: calc(50vw / 25);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 @media screen and (max-width: 600px) {
+	.about {
+		height: auto;
+	}
 	.about p {
 		font-size: 1em;
 		height: 100vh;
