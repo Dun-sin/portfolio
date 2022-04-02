@@ -21,9 +21,14 @@
 @media screen and (max-width: 600px) {
 	.about {
 		height: auto;
+		width: 100vw;
 	}
 	.about p {
+		padding: 30px;
 		font-size: 1em;
-		height: 100vh;
+	}
+
+	.achievement {
+		font-size: calc(50vw / 15);
 	}
 }

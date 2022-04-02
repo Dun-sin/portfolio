@@ -16,6 +16,9 @@
 	color: rgb(234, 240, 250);
 	margin-right: 10px;
 	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header p {

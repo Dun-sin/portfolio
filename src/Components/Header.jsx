@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <div className="header">
       <Link smooth to="/">
-        <p className='favour'>Favour</p>
+        Favour
       </Link>
       <div className="desktop">
         <HeaderDesktop />

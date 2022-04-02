@@ -2,7 +2,7 @@
 	font-family: 'Poppins', sans-serif;
 	min-height: 90vh;
 	overflow-y: hidden;
-	width: 100vw;
+	min-width: 90vw;
 	max-height: 100vh;
 	display: flex;
 	align-items: center;
