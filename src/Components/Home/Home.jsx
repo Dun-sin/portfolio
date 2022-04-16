@@ -17,7 +17,7 @@ const Home = () => {
 
   const handleDownload = () => {
     saveAs(
-      "https://cdn.filesend.jp/private/RpgAx1LUYoVzLAxz7IUxr71om351Uw3F3lC0nKqQEXdqosNKia7nqdhfbywDXbot/Favour%27s%20resume.pdf",
+      "https://filetransfer.io/data-package/AcNYO3df/download",
       "Favour's Resume.pdf"
     )
   }
